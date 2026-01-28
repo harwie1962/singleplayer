@@ -49,6 +49,13 @@
             font-weight: bold;
             letter-spacing: 3px;
             margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-text {
             animation: colorCycle 8s ease-in-out infinite;
             text-shadow: 
                 0 0 10px currentColor,
@@ -60,6 +67,22 @@
             text-shadow: 
                 0 0 10px #5fdfcf,
                 0 0 20px #5fdfcf;
+        }
+
+        .oak-leaf {
+            width: 28px;
+            height: 28px;
+            filter: drop-shadow(0 0 8px rgba(53, 255, 101, 0.8));
+            animation: leafGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes leafGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 8px rgba(53, 255, 101, 0.8));
+            }
+            50% { 
+                filter: drop-shadow(0 0 12px rgba(95, 223, 207, 0.9));
+            }
         }
 
         @keyframes colorCycle {
@@ -258,7 +281,10 @@
 <body>
     <div class="player">
         <!-- Logo -->
-        <div class="logo">o<span class="logo-pipes">||</span>s</div>
+        <div class="logo">
+            <img class="oak-leaf" src="https://raw.githubusercontent.com/harwie1962/singleplayer/refs/heads/main/Einenblatt.png" alt="Oak Leaf">
+            <span class="logo-text">o<span class="logo-pipes">||</span>s</span>
+        </div>
 
         <!-- Cover Art -->
         <div class="cover-container">
